@@ -1,0 +1,28 @@
+{
+    "name": "notes-ui",
+    "version": "1.0.0",
+    "description": "frontend for notes app using vanilla js",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --mode production",
+        "dev": "webpack serve"
+    },
+    "author": "Kartikey Shukla",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.4.0",
+        "css-loader": "^6.8.1",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.5.3",
+        "jsonwebtoken": "^9.0.2",
+        "masonry-layout": "^4.2.2",
+        "mini-css-extract-plugin": "^2.7.6",
+        "style-loader": "^3.3.3",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1",
+        "webpack-dev-server": "^4.15.1"
+    }
+}
