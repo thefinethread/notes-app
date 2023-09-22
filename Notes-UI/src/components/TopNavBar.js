@@ -106,7 +106,7 @@ class TopNavBar {
                 <label for="password">New Password</label>
                 <input type="password" name="password" id="password" value=''/>
             </div>
-            <input id="form-submits" type="submit" value="submit" />
+            <input id="form-submits" type="submit" value="Submit" />
         </form>`;
 
         this.#modalOverlay.appendChild(formModal);
@@ -150,10 +150,10 @@ class TopNavBar {
             const res = await NotesApi.updateUser(userObj);
             if (userObj.password) {
                 await NotesApi.logout();
-                hideSpinner();
                 document.location.hash = '/login';
             }
             this.closeEditProfileModal();
+            hideSpinner();
             this.#user.username = res.data.username;
         });
     };

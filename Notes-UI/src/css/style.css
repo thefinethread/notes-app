@@ -236,6 +236,7 @@ img {
 
 .note-modal {
     display: block;
+    transform: translateY(-120px);
 }
 .note-bottom {
     margin-top: 6px;
@@ -528,6 +529,7 @@ input[type='radio']:checked + label {
 }
 
 .login {
+    overflow-y: hidden;
     align-items: center;
     justify-content: center;
     padding-inline: 20px;
@@ -552,25 +554,25 @@ input[type='radio']:checked + label {
 }
 
 .form-container {
-    width: 334px;
+    width: 300px;
 }
 .form-container form {
     line-height: 30px;
     color: #111;
-    border-radius: 12px;
-    padding: 40px 30px;
+    border-radius: 8px;
+    padding: 28px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     background-color: rgb(255, 255, 255);
 }
 
 .form-container .form-control {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 .form-container input {
     width: 100%;
     display: block;
-    padding: 10px 9px;
+    padding: 9px;
     outline: none;
     border-radius: 5px;
     background: none;
@@ -592,9 +594,8 @@ input[type='radio']:checked + label {
     color: #fff;
     font-family: 'Roboto';
     font-weight: 500;
-    background: rgb(25, 104, 222);
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
+    background: rgb(54, 127, 237);
+    letter-spacing: 0.4px;
 }
 
 .form-container #form-submits:hover {
@@ -603,16 +604,16 @@ input[type='radio']:checked + label {
 
 .form-container .sign-up-text {
     text-align: center;
-    margin-top: 8px;
-    font-weight: 400;
-    font-size: 0.9rem;
+    margin-top: 40px;
+    font-weight: 300;
+    font-size: 0.85rem;
     color: #fff;
     letter-spacing: 0.8px;
 }
 
 .form-container .sign-up-text a {
     cursor: pointer;
-    color: #a0b2ec;
+    color: #bbc8f4;
 }
 
 .form-container .error-msg {
@@ -633,7 +634,7 @@ input[type='radio']:checked + label {
 }
 
 .edit-profile-form .form-header {
-    font-size: 0.7rem;
+    font-size: 0.64rem;
     font-weight: 400;
     color: var(--secondary-font-color);
     opacity: 60%;
@@ -674,10 +675,16 @@ input[type='radio']:checked + label {
         margin-inline: 20px;
     }
 
-    .bottom-icons {
-        opacity: 100%;
+    .note-card {
+        width: 300px;
     }
 
+    /* .bottom-icons {
+        opacity: 100%;
+    } */
+    .form-container {
+        width: 267px;
+    }
     #no-notes {
         position: absolute;
         color: var(--no-notes-font-color);

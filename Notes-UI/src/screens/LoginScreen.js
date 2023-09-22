@@ -18,7 +18,7 @@ const LoginScreen = {
                     <label for="password">Password</label>
                     <input class="login-input" type="password" name="password" id="password" required/>
                 </div>
-                <input id="form-submits" type="submit" value="login" />
+                <input id="form-submits" type="submit" value="Log in" />
             </form>
             <div class="sign-up-text">
                 Don’t have an account? <a id="redirect-to-signup">Sign up</a>
