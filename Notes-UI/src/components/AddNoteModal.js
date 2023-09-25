@@ -1,7 +1,7 @@
 import NoteInput from './NoteInput';
-import NotesApi from '../services/NotesApi';
 import NoteForm from '../services/NoteActions';
 import ColorPalette from './ColorPalette';
+import notesList from '../components/Notes';
 
 class FormModal {
     #notesContainer;
@@ -49,10 +49,10 @@ class FormModal {
                 !e.target.parentElement.classList.contains('pin-note')) ||
             e.target === this.#noteInputBeforeExpand
         ) {
-            const res = await NotesApi.getNoteById(
-                e.target.offsetParent.dataset.id
+            const allNotes = [...notesList.pinnedArr, ...notesList.unpinnedArr];
+            const note = allNotes.find(
+                (noteEl) => noteEl._id === e.target.offsetParent.dataset.id
             );
-            const note = res.data.data;
 
             this.createFormInput(isNewNote, note);
             this.#modalOverlay.appendChild(this.#formInput);

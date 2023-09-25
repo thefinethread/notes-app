@@ -64,7 +64,6 @@ class NoteForm {
         const note = {
             title: this.#noteTitle.innerText.trim(),
             note: this.#noteDesc.innerText.trim(),
-            username: 'default',
             pinned: pinnedEl.classList.contains('ri-pushpin-2-fill'),
             background: `${Array.from(this.#noteInputContainer.classList)
                 .find((cls) => cls.includes('color-'))
@@ -90,7 +89,6 @@ class NoteForm {
         const note = {
             title: this.#noteTitle.innerText.trim(),
             note: this.#noteDesc.innerText.trim(),
-            username: 'default',
             pinned: pinnedEl.classList.contains('ri-pushpin-2-fill'),
             background: `${Array.from(e.target.closest('.note-modal').classList)
                 .find((cls) => cls.includes('color-'))

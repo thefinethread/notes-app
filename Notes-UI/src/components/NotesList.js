@@ -1,11 +1,7 @@
 import NotesApi from '../services/NotesApi';
 import Masonry from 'masonry-layout';
 import { hideSpinner } from '../utils/utils';
-
-const notesList = {
-    pinnedArr: [],
-    unpinnedArr: [],
-};
+import notesList from '../components/Notes';
 
 class NotesList {
     #otherNotes;
@@ -42,22 +38,14 @@ class NotesList {
         try {
             const res = await NotesApi.getAllNotes();
             const notes = res.data.data;
-
             notesList.unpinnedArr = notes.filter((note) => !note.pinned);
             notesList.pinnedArr = notes.filter((note) => note.pinned);
-
-            this.sortArrayByUpdatedAt(notesList.unpinnedArr);
-            this.sortArrayByUpdatedAt(notesList.unpinnedArr);
 
             this.render();
             hideSpinner();
         } catch (error) {
             console.log(error);
         }
-    };
-
-    sortArrayByUpdatedAt = (array) => {
-        array.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
     };
 
     addNoteToList = (note) => {
